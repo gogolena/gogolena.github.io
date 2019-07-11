@@ -1,0 +1,882 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      PANDA的安装及使用 | gogolena
+    
+  </title>
+  <meta name="author" content="blingbling">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/Annie.css">
+  
+  <!-- jquery -->
+	<script src="/js/jquery.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+</head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/1.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<!-- Logo and navigation -->
+		<div class="h-header">
+			<div id="logo">
+				<a href="/">
+						
+						<img src="/img/logo.png" alt="Logo">
+					
+				</a>
+			</div>
+			
+			<div id="navigation-show">
+				<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">主页</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">归档</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">分类</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">标签</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">关于</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">相册</a>
+		</li>
+	
+
+	
+</ul>
+			</div>				
+		</div>
+
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<p class="motto"></p>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down" aria-hidden="true"></i>
+			</a>
+
+			
+				<!-- 
+	This is only a demo, please go to "https://time.is" to set your city time! 
+-->
+<style type="text/css">
+	.header-date {
+		font-size: 1.6rem;
+		color: #fff;
+		position: absolute;
+		bottom: 5px;
+		right: 1rem;
+		writing-mode: tb-rl;
+	}	
+	
+	.header-date a {
+		border-bottom: none;
+	}
+
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			font-size: 1rem;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow" ></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+			
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><h1>0.0%</h1></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			当前文章&nbsp;:&nbsp;《PANDA的安装及使用》
+		
+	</p>
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">主页</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">归档</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">分类</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">标签</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">关于</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">相册</a>
+		</li>
+	
+
+	
+</ul>
+	</div>
+	<div class="nav-footer">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+	<div class="article-title">
+		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+		
+	<a href="/2018/09/04/PANDA的安装及使用/" itemprop="url">
+		PANDA的安装及使用
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			<i class="fa fa-calendar"></i>
+			
+
+
+	发布于
+
+	<a href="/2018/09/04/PANDA的安装及使用/" itemprop="url">
+		<time datetime="2018-09-04T02:19:49.000Z" itemprop="datePublished">
+	  		2018-09-04
+	  </time>
+	</a>
+	&nbsp;
+
+
+
+
+
+			
+
+
+
+
+	更新于
+
+	<a href="/2018/09/04/PANDA的安装及使用/" itemprop="url">
+		<time datetime="2018-09-04T02:19:49.000Z" itemprop="dateUpdated">
+	  		2018-09-04
+	  </time>
+	</a> 
+
+
+
+		</span>
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/panda/" class=" ">
+			panda
+		</a>
+	
+		
+		</span>
+		
+		
+
+
+
+	</div>
+
+	<div class="article-content" id="article-content">
+		<h1 id="1-PANDA及其运行环境安装"><a href="#1-PANDA及其运行环境安装" class="headerlink" title="1 PANDA及其运行环境安装"></a>1 PANDA及其运行环境安装</h1><h2 id="1-1-安装PANDA"><a href="#1-1-安装PANDA" class="headerlink" title="1.1 安装PANDA"></a>1.1 安装PANDA</h2><ul>
+<li>首先，在GitHub上根据官方文档安装。地址：<a href="https://github.com/panda-re/panda" target="_blank" rel="noopener">https://github.com/panda-re/panda</a></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:phulin/panda</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get build-dep qemu</span><br><span class="line">sudo apt-get install python-pip git protobuf-compiler protobuf-c-compiler \</span><br><span class="line">  libprotobuf-c0-dev libprotoc-dev python-protobuf libelf-dev \</span><br><span class="line">  libcapstone-dev libdwarf-dev python-pycparser llvm-3.3 clang-3.3 libc++-dev</span><br><span class="line">git clone https://github.com/panda-re/panda</span><br><span class="line">mkdir -p build-panda &amp;&amp; cd build-panda</span><br><span class="line">../panda/build.sh</span><br></pre></td></tr></table></figure>
+<p>安装代码就是这一小段，选用的主机操作系统是Ubuntu 14.04。</p>
+<h2 id="1-2-安装QEMU"><a href="#1-2-安装QEMU" class="headerlink" title="1.2 安装QEMU"></a>1.2 安装QEMU</h2><ul>
+<li>在官网下载qemu2.8。</li>
+<li>拷贝到某个目录下进行解压缩</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -Jxvf 源文件 -C 目标文件夹 </span><br><span class="line">如：tar -Jxvf qemu-2.8.1.1.tar.xz -C /home/yuan</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在~目录下新建一个build-qemu文件夹，转到该文件夹进行qemu的configure。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mkdir -p build-qemu &amp;&amp; cd build-qemu</span><br><span class="line">../qemu/configure --enalbe-debug</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后再make一下</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j4        //电脑是四核的，所以-j4，运行起来更快</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-QEMU安装win7"><a href="#1-3-QEMU安装win7" class="headerlink" title="1.3 QEMU安装win7"></a>1.3 QEMU安装win7</h2><ul>
+<li>首先，在~目录下创建一个image文件夹，然后创建一个win7.qcow2文件。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mkdir -p image</span><br><span class="line">cd image</span><br><span class="line">qemu-img create -f qcow2 win7.qcow2 8G</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后将win7的镜像文件拷贝到win7.qcow2所在目录下。</li>
+<li>转到/home/yuan/build-qemu/i386-softmmu目录下执行</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./qemu-system-i386 -m 512 -hda /home/yuan/IMG/win7.qcow2 -cdrom /home/yuan/IMG/win7.iso -boot d -enable-kvm</span><br><span class="line">（如果需要鼠标控制则加上 -usbdevice tablet ，如果要加速则加上-enable-kvm）</span><br></pre></td></tr></table></figure>
+<h3 id="遇到的小问题"><a href="#遇到的小问题" class="headerlink" title="遇到的小问题"></a>遇到的小问题</h3><p>一开始显示我电脑不支持kvm，于是上网搜罗了一大堆原因，如下：</p>
+<p>How to fix error ‘Could not access KVM kernel module’ in Proxmox, Virtualizor, SolusVM, Redhat, CentOS and Ubuntu：</p>
+<p><a href="https://bobcares.com/blog/how-to-fix-error-could-not-access-kvm-kernel-module/" target="_blank" rel="noopener">https://bobcares.com/blog/how-to-fix-error-could-not-access-kvm-kernel-module/</a></p>
+<p>查看是否可虚拟化：</p>
+<p><a href="http://www.linuxidc.com/Linux/2012-09/69714.htm" target="_blank" rel="noopener">http://www.linuxidc.com/Linux/2012-09/69714.htm</a></p>
+<p>最后才发现原来是这个原因，就因为这么一个低级错误竟然害我折腾了一晚上的时间。。。</p>
+<p><a href="http://yang19890314.blog.51cto.com/1620466/1136803" target="_blank" rel="noopener">http://yang19890314.blog.51cto.com/1620466/1136803</a></p>
+<h2 id="1-4-运行小测试"><a href="#1-4-运行小测试" class="headerlink" title="1.4 运行小测试"></a>1.4 运行小测试</h2><ul>
+<li>在PANDA中启动qemu</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /home/yuan/build-panda/i386-softmmu</span><br><span class="line">./qemu-system-i386 -m 512 -hda /home/yuan/IMG/win7.qcow2 -monitor stdio -usbdevice tablet</span><br><span class="line">或者</span><br><span class="line">./qemu-system-i386 –m 1024 –os windows-32-7 –drive file=/home/bling/image/win7.qcow2 –monitor stdio</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在qemu中启动虚拟机</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/yuan/build-qemu/i386-softmmu</span><br><span class="line">./qemu-system-i386 -m 512 -hda /home/yuan/IMG/win7.qcow2 -enable-kvm -monitor stdio -usbdevice tablet</span><br></pre></td></tr></table></figure>
+<h2 id="1-5-安装vsftp"><a href="#1-5-安装vsftp" class="headerlink" title="1.5 安装vsftp"></a>1.5 安装vsftp</h2><ul>
+<li>执行如下命令</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vsftpd</span><br><span class="line">sudo gedit /etc/vsftpd.conf</span><br></pre></td></tr></table></figure>
+<ul>
+<li>更改vsftpd.conf中的dir项，改成本机中的某个文件夹，用来传输文件给qemu中的win7虚拟机。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">secure chroot dir=/home/yuan/ftpShare</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ifconfig一下，查看ip地址。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br><span class="line">(eth0   inet addr:192.168.43.19)</span><br><span class="line">(lo     inet addr:127.0.0.1)</span><br></pre></td></tr></table></figure>
+<p>然后配置相应参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo service vsftpd restart</span><br><span class="line">ftp 127.0.0.1</span><br><span class="line">(name:  )</span><br><span class="line">(Password:  )</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置完成后，打开qemu模拟器，在IE浏览器中输入<a href="ftp://192.168.43.19/，然后输入上面设置的用户名和密码，即可访问Ubuntu主机中ftpShare目录下的文件了。" target="_blank" rel="noopener">ftp://192.168.43.19/，然后输入上面设置的用户名和密码，即可访问Ubuntu主机中ftpShare目录下的文件了。</a></li>
+</ul>
+<h1 id="2-使用PANDA"><a href="#2-使用PANDA" class="headerlink" title="2 使用PANDA"></a>2 使用PANDA</h1><h2 id="2-1-用PANDA打开qemu"><a href="#2-1-用PANDA打开qemu" class="headerlink" title="2.1 用PANDA打开qemu"></a>2.1 用PANDA打开qemu</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /home/yuan/build-panda/i386-softmmu</span><br><span class="line">./qemu-system-i386 /home/yuan/image/win7.qcow2 -m 1024 -monitor stdio -usbdevice tablet</span><br><span class="line">或者</span><br><span class="line">./qemu-system-i386 -hda /home/yuan/image/win7.qcow2 -m 1024 -monitor stdio -usbdevice tablet</span><br></pre></td></tr></table></figure>
+<p>记录重放文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">begin_record xxx        //选择一个点开始拍摄快照，记录</span><br><span class="line">end_record          //结束记录</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+<p>运行重放文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./qemu-system-i386 -replay itry -hda /home/kumquat_cc/IMG/win7.qcow2 -m 512 -monitor stdio -usbdevice tablet</span><br></pre></td></tr></table></figure>
+<h1 id="2-2-使用scissors插件"><a href="#2-2-使用scissors插件" class="headerlink" title="2.2 使用scissors插件"></a>2.2 使用scissors插件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./qemu-system-i386 -m 512 -hda /home/kumquat_cc/IMG/win7.qcow2 -monitor stdio -usbdevice tablet -replay itry -panda scissors:name=cutstart,start=39410248,end=72252110</span><br><span class="line">或者</span><br><span class="line">./qemu-system-i386 -m 1024 -replay xxx -panda scissors:name=xxxxx,start=num1,end=num2</span><br></pre></td></tr></table></figure>
+<h1 id="2-3-使用test插件"><a href="#2-3-使用test插件" class="headerlink" title="2.3 使用test插件"></a>2.3 使用test插件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./qemu-system-i386 -m 1024 -os windows-32-7 -replay xxx -panda test:path=/home/bling/mytraces/xxxx.db</span><br><span class="line">或者</span><br><span class="line">./qemu-system-i386 -replay XXX -m 1024 -os windows-32-7 -panda osi -panda test:process_name=XXX.exe,path=/home/bling/mytraces/XXX.db -panda win7x86intro</span><br></pre></td></tr></table></figure>
+<h1 id="2-4-添加新插件"><a href="#2-4-添加新插件" class="headerlink" title="2.4 添加新插件"></a>2.4 添加新插件</h1><blockquote>
+<p>1、将插件文件放在../panda/panda/plugins/目录下</p>
+</blockquote>
+<blockquote>
+<p>2、在config.panda中添加新插件的名字</p>
+</blockquote>
+<blockquote>
+<p>3、在build-panda中make一下</p>
+</blockquote>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<div>评论</div>
+				<div>分享</div>
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+			<a href="/2018/09/04/linux4.4.0安装EP-DB1608驱动/" title="linux4.4.0安装EP-DB1608驱动" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+			
+	</span>
+
+
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/01/22/BugkuCTF-安卓/" title="BugkuCTF-安卓">
+								BugkuCTF-安卓			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 22日, 2019				
+							</p>
+							<p class="relate-post-content">
+								signin
+将apk安装到手机中，adb install Sign_in.apk。
+
+观察界面，一个输入框，一个login按钮。初步估计需要输入一串正确的数字，就可以login。
+
+使用androidKiller反编译apk文件。发...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/01/22/BugkuCTF-安卓/" title="BugkuCTF-安卓">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="BugkuCTF-安卓"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/01/22/BugkuCTF-WEB/" title="BugkuCTF-WEB">
+								BugkuCTF-WEB			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								一月 22日, 2019				
+							</p>
+							<p class="relate-post-content">
+								web2打开链接后直接查看源码，得到flag为KEY{Web-2-bugKssNNikls9100}。
+
+计算器​    查看源码
+
+​    一开始maxlength为1，所以根本无法输入正确答案。于是我们手动将它的值改大一些，然后...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/01/22/BugkuCTF-WEB/" title="BugkuCTF-WEB">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="BugkuCTF-WEB"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2018/09/04/ubuntu之sogou与firefox/" title="ubuntu之sogou与firefox">
+								ubuntu之sogou与firefox			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 4日, 2018				
+							</p>
+							<p class="relate-post-content">
+								1 ubuntu14.04安装搜狗输入法参考链接：https://blog.csdn.net/sheng_mu555/article/details/82078082
+分三步：
+
+1、添加fcitx的键盘输入法系统。（sogou是基于...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2018/09/04/ubuntu之sogou与firefox/" title="ubuntu之sogou与firefox">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="ubuntu之sogou与firefox"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2018/09/04/linux4.4.0安装EP-DB1608驱动/" title="linux4.4.0安装EP-DB1608驱动">
+								linux4.4.0安装EP-DB1608驱动			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								九月 4日, 2018				
+							</p>
+							<p class="relate-post-content">
+								EP-DB1608无线网卡驱动安装（linux内核版本大于3.10时）
+针对EP-DB1608无线网卡驱动的安装，官网只给出了linux kernel&lt;=4.3.14的安装包。折腾了很久，决定自己上网寻找解决方案。
+
+使用lsu...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2018/09/04/linux4.4.0安装EP-DB1608驱动/" title="linux4.4.0安装EP-DB1608驱动">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="linux4.4.0安装EP-DB1608驱动"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+		</ul>
+	
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know !!!-->
+			<div>Please check the comment setting in config.yml of hexo-theme-Annie!</div>
+			
+		
+		
+	
+
+</div>
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+			</div>
+		</div>	
+	</div>
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+
+<!-- show math formula -->
+
+
+
+	 
+	<script src="/plugin/clipboard/clipboard.js"></script>
+	<script>
+		// Copy code !
+	    function codePreprocessing() {
+	        $("#article-content .highlight").each(function() {
+
+	            $(this).wrap('<div id="post-code"></div>');
+
+	        })
+
+	        $("#article-content #post-code").each(function() {
+
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            var temp = $(this).next().attr('class'),
+	                language = ((temp.length > 9) && (temp != null)) ? temp.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+
+	            $(this).append('<span class="copy-btn"><i class="fa fa-copy" aria-hidden="true"></i></span>');
+
+	        });
+	    }
+
+		function codeCopy() {
+		    $('#article-content #post-code').each(function(i) {
+		        var codeCopyId = 'codeCopy-' + i;
+
+		        var codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+
+		    
+			var clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn copy-status');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');
+			    
+			});
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		
+
+		}
+
+		if ($('.layout-post').length) {
+		    codePreprocessing();
+		    codeCopy();
+		} 
+	</script>
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+	var titleID = $('.article-title a'),
+		imageID = $('.article-content img'),
+		videoID = $('.article-content video');
+
+	var postTitle = titleID.text() ? titleID.text() : "No post title!";
+
+	imageID.each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+
+		//给每个匹配的<img>元素打包, 即添加父元素<a>
+		$(this).wrap('<a data-fancybox="gallery" data-caption=" 《 ' + postTitle + ' 》 ' + imgTitle + ' "  href=" ' + imgPath + ' "> </a>');
+	});
+
+	videoID.each(function() {
+		var videoPath = $(this).attr('src');
+
+		//给每个匹配的<img>元素打包, 即添加父元素<a>
+		$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+	});
+	//TODO：支持html5 video
+
+	if($('#layout-post').length) {
+		$('[data-fancybox="gallery"]').fancybox({
+			loop: true,
+			buttons: [
+				"zoom",
+				"share",
+				"slideShow",
+				"fullScreen",
+				//"download",
+				"thumbs",
+				"close"
+			],
+			protect: false
+		});
+	}
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2019, content by blingbling. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- set '1' to show motto in all pages! -->
+
+	<script src="/plugin/motto/motto.js"></script>
+	
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+
+<!-- love effect -->
+
+	<script src="/plugin/love/love.js"></script>
+
+
+<!-- back to top -->
+
+	
+	<div id="totop">
+  		<a href="javascript:;"  name="TOTOP" class="fa fa-arrow-up" ></a>
+	</div>
+
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<script src="/plugin/vibrant/vibrant.js"></script>
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imgLazyLoader/yall.min.js"></script>
+<script src="/plugin/imgResize/jquery.resizeimagetoparent.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/js/resizediv.js"></script>
+<script src="/js/main.js"></script>
+	</body>	
+</html>
